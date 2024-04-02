@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_guest_house_info_locations",
+  "info": {
+    "displayName": "location",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "city": {
+      "type": "string"
+    },
+    "province": {
+      "type": "enumeration",
+      "enum": [
+        "Gauteng",
+        "Limpopo",
+        "Eastern Cape",
+        "Western Cape",
+        "Free state",
+        "Mpumalanga",
+        "North West",
+        "Kwa Zulu Natal",
+        "Northern Cape"
+      ]
+    },
+    "town": {
+      "type": "string"
+    },
+    "village": {
+      "type": "string"
+    },
+    "zip_code": {
+      "type": "string"
+    }
+  }
+}

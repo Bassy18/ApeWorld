@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "room_types",
+  "info": {
+    "singularName": "room-type",
+    "pluralName": "room-types",
+    "displayName": "roomType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "numOfRooms": {
+      "type": "integer"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "lodges": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lodge.lodge",
+      "inversedBy": "room_types"
+    }
+  }
+}

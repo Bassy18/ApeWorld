@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_infos",
+  "info": {
+    "singularName": "user-info",
+    "pluralName": "user-infos",
+    "displayName": "userInfo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "dp": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "identityNumber": {
+      "type": "string",
+      "minLength": 13,
+      "maxLength": 13,
+      "unique": true
+    },
+    "phoneNumber": {
+      "type": "string",
+      "maxLength": 10,
+      "minLength": 10,
+      "unique": true
+    },
+    "province": {
+      "type": "enumeration",
+      "enum": [
+        "Gauteng",
+        "North West",
+        "Free State",
+        "Mpumalanga",
+        "Western Cape",
+        "KZN",
+        "Limpopo",
+        "Eastern Cape",
+        "Northern Cape"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "user_info"
+    },
+    "lodgeId": {
+      "type": "integer",
+      "default": 0,
+      "required": false
+    },
+    "lodgeAdmin": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

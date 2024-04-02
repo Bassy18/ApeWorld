@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_guest_house_info_contact_details",
+  "info": {
+    "displayName": "contact_details",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "phone_numbers": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "email_address": {
+      "type": "email",
+      "required": true,
+      "unique": false
+    },
+    "location_description": {
+      "type": "richtext"
+    },
+    "location": {
+      "displayName": "location",
+      "type": "component",
+      "repeatable": false,
+      "component": "guest-house-info.location"
+    }
+  }
+}

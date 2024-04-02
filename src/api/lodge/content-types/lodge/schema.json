@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lodges",
+  "info": {
+    "singularName": "lodge",
+    "pluralName": "lodges",
+    "displayName": "lodge",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "contact_details": {
+      "displayName": "contact_details",
+      "type": "component",
+      "repeatable": false,
+      "component": "guest-house-info.contact-details"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "lodge"
+    },
+    "main": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Pricing": {
+      "type": "integer",
+      "required": true
+    },
+    "rating": {
+      "type": "integer",
+      "default": 0,
+      "required": false,
+      "min": 0,
+      "max": 5
+    },
+    "offers": {
+      "displayName": "offers",
+      "type": "component",
+      "repeatable": false,
+      "component": "guest-house-info.offers"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "lodge"
+    },
+    "mapSrc": {
+      "type": "text"
+    },
+    "room_types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::room-type.room-type",
+      "mappedBy": "lodges"
+    }
+  }
+}

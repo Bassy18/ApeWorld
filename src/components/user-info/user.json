@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_user_info_users",
+  "info": {
+    "displayName": "User",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "identityNumber": {
+      "type": "string",
+      "maxLength": 13,
+      "minLength": 13,
+      "unique": true
+    },
+    "dp": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "phoneNumber": {
+      "type": "string"
+    }
+  }
+}

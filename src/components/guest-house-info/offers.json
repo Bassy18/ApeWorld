@@ -1,0 +1,70 @@
+{
+  "collectionName": "components_guest_house_info_offers",
+  "info": {
+    "displayName": "offers",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "wifi": {
+      "type": "boolean",
+      "default": false
+    },
+    "free_parking": {
+      "type": "boolean",
+      "default": false
+    },
+    "Pool": {
+      "type": "boolean",
+      "default": false
+    },
+    "toilet": {
+      "type": "boolean",
+      "default": false
+    },
+    "Food": {
+      "type": "boolean",
+      "default": false
+    },
+    "fridge": {
+      "type": "boolean",
+      "default": false
+    },
+    "beverages": {
+      "type": "boolean",
+      "default": false
+    },
+    "braai_place": {
+      "type": "boolean",
+      "default": false
+    },
+    "shower": {
+      "type": "boolean",
+      "default": false
+    },
+    "bathtub": {
+      "type": "boolean",
+      "default": false
+    },
+    "pillows_blankets": {
+      "type": "boolean",
+      "default": false
+    },
+    "chill_place": {
+      "type": "boolean",
+      "default": false
+    },
+    "double_bed": {
+      "type": "boolean",
+      "default": false
+    },
+    "single_bed": {
+      "type": "boolean",
+      "default": false
+    },
+    "balcony": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
